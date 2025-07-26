@@ -33,6 +33,7 @@ function HeroNavbar({ collapsed, setCollapsed }) {
                   src={collapsed ? topshowLogoSvg : topshowLogoFullSvg}
                   alt="logo"
                   width={collapsed ? 50 : 120}
+                  priority={false}
                 />
               </motion.div>
             )}
