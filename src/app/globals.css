@@ -19,3 +19,28 @@
   background-repeat: no-repeat;
   animation: shimmer 1.5s infinite linear;
 }
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-scroll-up {
+  animation: scroll-up 45s linear infinite;
+}
+
+.animate-scroll-down {
+  animation: scroll-down 45s linear infinite;
+}
