@@ -1,19 +1,21 @@
-import VerticalSideBySideReelRight from "@/components/verticalScroller/new";
+import VerticalSideBySideReelRight from "@/components/verticalScroller/VerticalSideBySideReelRight";
+import { topshowLogoFullPng, topshowLogoSvg } from "@/constants/imageExports";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <main className="relative h-screen flex bg-gradient-to-br from-black via-zinc-900 to-black text-white">
+    <main className="main__container h-screen flex bg-gradient-to-br from-black via-zinc-900 to-black text-white p-20">
       {/* Left content */}
-      <section className="flex-1 p-16 z-10">
-        <h1 className="text-5xl font-bold mb-4">TopShow 🎬</h1>
-        <p className="text-lg max-w-xl">
-          Explore movies in motion with stunning visual reels — updated live
-          from TMDB.
-        </p>
+      <section className="left__container w-1/2">
+        <span className="main-header__container flex items-center gap-2">
+          <Image src={topshowLogoSvg} alt="" className="w-10" />
+          <h1 className="text-5xl font-bold">Topshow</h1>
+        </span>
       </section>
-
       {/* Right-side reels */}
-      <VerticalSideBySideReelRight />
+      <section className="right__container">
+        <VerticalSideBySideReelRight />
+      </section>
     </main>
   );
 }

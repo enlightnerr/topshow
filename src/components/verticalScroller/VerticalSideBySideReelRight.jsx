@@ -43,7 +43,7 @@ const VerticalSideBySideReelRight = () => {
   }, []);
 
   const ScrollColumn = ({ movies, reverse = false }) => (
-    <div className="relative w-full h-1/2 sm:h-full sm:w-1/2 overflow-hidden">
+    <div className="relative w-full h-1/2 sm:h-full sm:w-1/2 overflow-hidden -skew-x-5">
       <motion.div
         className={`absolute top-0 left-0 w-full flex flex-col ${
           reverse ? "animate-scroll-down" : "animate-scroll-up"
@@ -57,7 +57,7 @@ const VerticalSideBySideReelRight = () => {
             <img
               src={`${TMDB_IMAGE_URL}${movie.poster_path}`}
               alt={movie.title}
-              className="w-40 sm:w-64 object-cover rounded-lg shadow-md"
+              className="object-cover rounded-lg shadow-md"
             />
           </div>
         ))}
@@ -66,7 +66,7 @@ const VerticalSideBySideReelRight = () => {
   );
 
   return (
-    <div className="fixed top-0 right-0 h-screen w-full sm:w-1/3 flex flex-col sm:flex-row bg-black z-20">
+    <div className="fixed top-0 right-10 h-screen w-full sm:w-1/3 flex  flex-col sm:flex-row z-20">
       <ScrollColumn movies={trendingMovies} />
       <ScrollColumn movies={topRatedMovies} reverse />
     </div>
