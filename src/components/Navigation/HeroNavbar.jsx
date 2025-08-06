@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { topshowLogoFullSvg, topshowLogoSvg } from "@/constants/imageExports";
+import {
+  topshowLogoFullSvgBlack,
+  topshowLogoSvg,
+} from "@/constants/imageExports";
 import { heroNavbarList } from "@/constants/navigationExports";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +20,7 @@ function HeroNavbar({ collapsed, setCollapsed }) {
       <motion.div
         animate={{ width: collapsed ? 60 : 240 }}
         transition={{ duration: 0.4, type: "linear" }}
-        className="h-full bg-amber-200 overflow-hidden px-2 py-5 hidden sm:block"
+        className="h-full bg-gray-500  overflow-hidden px-2 py-5 hidden sm:block"
       >
         {/* Brand & Toggle */}
         <div className="flex items-center justify-between mb-6">
@@ -30,7 +33,7 @@ function HeroNavbar({ collapsed, setCollapsed }) {
                 exit={{ opacity: 0 }}
               >
                 <Image
-                  src={collapsed ? topshowLogoSvg : topshowLogoFullSvg}
+                  src={collapsed ? topshowLogoSvg : topshowLogoFullSvgBlack}
                   alt="logo"
                   width={collapsed ? 50 : 120}
                   priority={false}
