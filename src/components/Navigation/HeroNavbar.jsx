@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   topshowLogoFullSvgBlack,
+  topshowLogoFullSvgWhite,
   topshowLogoSvg,
 } from "@/constants/imageExports";
 import { heroNavbarList } from "@/constants/navigationExports";
@@ -20,7 +21,7 @@ function HeroNavbar({ collapsed, setCollapsed }) {
       <motion.div
         animate={{ width: collapsed ? 60 : 240 }}
         transition={{ duration: 0.4, type: "linear" }}
-        className="h-full bg-gray-500  overflow-hidden px-2 py-5 hidden sm:block"
+        className="h-full bg-gray-900 text-white  overflow-hidden px-2 py-5 hidden sm:block"
       >
         {/* Brand & Toggle */}
         <div className="flex items-center justify-between mb-6">
@@ -33,7 +34,7 @@ function HeroNavbar({ collapsed, setCollapsed }) {
                 exit={{ opacity: 0 }}
               >
                 <Image
-                  src={collapsed ? topshowLogoSvg : topshowLogoFullSvgBlack}
+                  src={collapsed ? topshowLogoSvg : topshowLogoFullSvgWhite}
                   alt="logo"
                   width={collapsed ? 50 : 120}
                   priority={false}
@@ -51,7 +52,7 @@ function HeroNavbar({ collapsed, setCollapsed }) {
           {heroNavbarList.map((item) => (
             <li
               key={item.id}
-              className="hover:bg-gray-200 p-2 rounded-md cursor-pointer"
+              className="hover:bg-gray-500 hover:text-gray-200 p-2 rounded-md cursor-pointer"
             >
               <Link href={item.path}>
                 <div className="flex items-center space-x-2">
