@@ -20,7 +20,7 @@ function WebLayout({ children }) {
       <HeroNavbar collapsed={collapsed} setCollapsed={setCollapsed} />
 
       {/* Page Content */}
-      <div className="flex-1 bg-blue overflow-auto">{children}</div>
+      <div className="flex-1 bg-blue-500 overflow-auto">{children}</div>
     </div>
   );
 }
