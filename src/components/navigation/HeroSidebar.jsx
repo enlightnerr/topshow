@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  topshowLogoFullSvgBlack,
   topshowLogoFullSvgWhite,
   topshowLogoSvg,
 } from "@/constants/imageExports";
@@ -12,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiMenu2Fill, RiCloseLine } from "react-icons/ri";
 
-export default function HeroNavbar({ collapsed, setCollapsed }) {
+export default function HeroSidebar({ collapsed, setCollapsed }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -79,7 +78,7 @@ export default function HeroNavbar({ collapsed, setCollapsed }) {
       </motion.div>
 
       {/* Mobile Toggle Button */}
-      <div className="sm:hidden flex items-center justify-between px-4 py-3 bg-amber-200">
+      <div className="sm:hidden flex items-center justify-between px-4 py-3 bg-gray-900 text-white">
         <Image src={topshowLogoSvg} alt="logo" width={40} />
         <RiMenu2Fill
           className="w-6 h-6 cursor-pointer"
@@ -95,7 +94,7 @@ export default function HeroNavbar({ collapsed, setCollapsed }) {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-amber-200 sm:hidden p-5"
+            className="fixed inset-0 z-50 bg-gray-900 text-white sm:hidden p-5"
           >
             {/* Close Button */}
             <div className="flex justify-end mb-4">
