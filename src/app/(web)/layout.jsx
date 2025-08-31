@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import HeroNavbar from "@/components/navigation/HeroNavbar";
+import HeroSidebar from "@/components/navigation/HeroSidebar";
 
 function WebLayout({ children }) {
   const [collapsed, setCollapsed] = useState(false);
@@ -17,10 +17,10 @@ function WebLayout({ children }) {
         }}
       />
 
-      <HeroNavbar collapsed={collapsed} setCollapsed={setCollapsed} />
+      <HeroSidebar collapsed={collapsed} setCollapsed={setCollapsed} />
 
       {/* Page Content */}
-      <div className="flex-1 bg-blue overflow-auto">{children}</div>
+      <div className="flex-1 overflow-auto">{children}</div>
     </div>
   );
 }
