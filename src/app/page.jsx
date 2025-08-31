@@ -1,8 +1,5 @@
-import VerticalSideBySideReelRight from "@/components/verticalScroller/VerticalSideBySideReelRight";
-import {
-  topshowLogoFullSvgWhite,
-  topshowLogoSvg,
-} from "@/constants/imageExports";
+import VerticalSideBySideReelRight from "../components/verticalScroller/VerticalSideBySideReelRight";
+import { topshowLogoFullSvgWhite } from "../constants/imageExports";
 import Image from "next/image";
 import Link from "next/link";
 
