@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import HeroNavbar from "../../components/navigation/HeroNavbar";
+import HeroNavbar from "@/components/navigation/HeroNavbar";
 
 function WebLayout({ children }) {
   const [collapsed, setCollapsed] = useState(false);
