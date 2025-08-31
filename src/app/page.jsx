@@ -1,8 +1,5 @@
 import VerticalSideBySideReelRight from "@/components/verticalScroller/VerticalSideBySideReelRight";
-import {
-  topshowLogoFullSvgWhite,
-  topshowLogoSvg,
-} from "@/constants/imageExports";
+import { topshowLogoFullSvgWhite } from "@/constants/imageExports";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +12,7 @@ export default function HomePage() {
           <Image
             src={topshowLogoFullSvgWhite}
             alt="Topshow logo"
-            className="w-40 sm:w-56"
+            className=" lg:w-full sm:w-56"
             priority
           />
         </div>
