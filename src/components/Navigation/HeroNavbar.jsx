@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiMenu2Fill, RiCloseLine } from "react-icons/ri";
 
-function HeroNavbar({ collapsed, setCollapsed }) {
+export default function HeroNavbar({ collapsed, setCollapsed }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -127,5 +127,3 @@ function HeroNavbar({ collapsed, setCollapsed }) {
     </>
   );
 }
-
-export default HeroNavbar;
