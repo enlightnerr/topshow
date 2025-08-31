@@ -12,7 +12,7 @@ export default function HomePage() {
           <Image
             src={topshowLogoFullSvgWhite}
             alt="Topshow logo"
-            className=" lg:w-full sm:w-56"
+            className=" lg:w-4/5 sm:w-56"
             priority
           />
         </div>
